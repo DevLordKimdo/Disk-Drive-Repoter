@@ -249,10 +249,13 @@ async function main() {
     let intervalMs = timeoutMinutes * 60 * 1000;
 
     // 텔레그램 관련 변수
-    let telegramToken = config.TelegramToken;
+    let telegramToken  = config.TelegramToken;
     let TelegramChatID = config.TelegramChatID;
-    let TelegramSend = config.TelegramSend;
-    let Telbot = new TelegramBot(telegramToken, {polling: true});
+    let TelegramSend   = config.TelegramSend;
+    if (TelegramSend == "Y") {
+        let Telbot = new TelegramBot(telegramToken, {polling: true});
+    }
+
     let writeMessageTotal = "";
 
     // 시작 메세지 - console.log

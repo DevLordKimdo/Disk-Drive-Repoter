@@ -1,0 +1,2 @@
+1. npm install - npm 모듈을 설치할 것
+2. pkg . - 패키징. exe파일 생성
